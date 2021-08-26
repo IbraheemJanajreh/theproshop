@@ -42,7 +42,7 @@ const ProductListScreen = () => {
     if (successDelete) {
       dispatch(productDeleteAction.productDeleteReset());
     }
-    if (!userInfo && !userInfo.isAdmin) {
+    if (!userInfo || !userInfo.isAdmin) {
       history.push("/login");
     }
     if (successCreate) {
