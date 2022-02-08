@@ -1,25 +1,36 @@
-# proshop
+# ProShop eCommerce Platform
+### Env Variables
 
-Run
+Create a .env file in then root and add the following
+```
+NODE_ENV = development
+PORT = 5000
+MONGO_URI = your mongodb uri
+JWT_SECRET = 'abc123'
+PAYPAL_CLIENT_ID = your paypal client id
+```
 
--Run frontend (:3000) & backend (:5000) -> 
+### Install Dependencies (frontend & backend)
+```
+npm install
+cd frontend
+npm install
+```
+
+### Run
+```
+- Run frontend (:3000) & backend (:5000) 
 npm run dev
 
--Run backend only -> 
+- Run backend only 
 npm run server
+```
 
-
-Build & Deploy
-- Create frontend prod build
-cd frontend
-npm run build
-
-
-Seed Database
-
+### Seed Database
+```
 - Import data
 npm run data:import
 
 - Destroy data
 npm run data:destroy
-
+```
